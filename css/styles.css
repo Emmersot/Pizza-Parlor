@@ -4,13 +4,26 @@
   margin: 0;
   border: 0;
 }
+
+.food-items{
+  width: 100%;
+  height: auto;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
 html,body{
   height: 100%;
   margin: 0;
 }
+
 .container-fluid{
   display: grid;
-  grid-template-columns: 15vw 70vw 15vw;
+  grid-template-columns: 10vw 70vw 20vw;
   height: 100%;
   overflow: hidden;
   padding: 0;
@@ -20,7 +33,6 @@ html,body{
 }
 
 .menu-item a{
-  
   display: block;
   text-decoration: none;
   font-size: 20px;
@@ -37,14 +49,14 @@ html,body{
   background: bisque;
 }
 
-
-
 #food-container{
+  
+  box-sizing: content-box;
   background: whitesmoke;
   overflow: scroll;
   overflow-x: hidden;
-  box-sizing: content-box;
 }
+
 #header{
   display: flex;
   justify-content: space-between;
@@ -56,12 +68,15 @@ html,body{
   background: whitesmoke;
   z-index: 1;
 }
+
 ::-webkit-scrollbar{
   display: none;
 }
+
 #header .address{
   font-size: 20px;
 }
+
 .your-address{
   border: 1px solid indianred;
   color: indianred;
@@ -72,6 +87,7 @@ html,body{
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
 #cart{
   background: lavender;
 }
