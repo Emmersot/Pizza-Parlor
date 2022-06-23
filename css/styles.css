@@ -1,20 +1,29 @@
-*{
+/* *{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   border: 0;
+} */
+.card{
+  padding: 5px 7px;
+  text-align: center;
 }
-
-.food-items{
+#cards{
+  padding: 10px 25px 10px;
+}
+.card-title{
+  text-align: center;
+}
+/* .food-items{
   width: 100%;
   height: auto;
-}
+} */
 
-img{
+/* img{
   width: 100%;
   height: auto;
   position: relative;
-}
+} */
 
 html,body{
   height: 100%;
@@ -23,7 +32,7 @@ html,body{
 
 .container-fluid{
   display: grid;
-  grid-template-columns: 10vw 70vw 20vw;
+  grid-template-columns: 15vw 70vw 15vw;
   height: 100%;
   overflow: hidden;
   padding: 0;
@@ -31,6 +40,13 @@ html,body{
   border: 0;
   box-sizing: border-box;
 }
+
+/* #item-name{
+  margin: 5px 0;
+  font-weight: 600;
+  color: darkslategray;
+  font-size: 18px;
+} */
 
 .menu-item a{
   display: block;
@@ -45,48 +61,25 @@ html,body{
 .menu-item a:hover{
   background: rgb(250, 212, 218);
 }
+
 #menu{
   background: bisque;
 }
 
 #food-container{
-  
+  display: grid;
   box-sizing: content-box;
-  background: whitesmoke;
+  background: rgb(131, 8, 8);
   overflow: scroll;
   overflow-x: hidden;
 }
-
-#header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  position: sticky;
-  top: 0;
-  background: whitesmoke;
-  z-index: 1;
-}
-
 ::-webkit-scrollbar{
   display: none;
 }
 
-#header .address{
-  font-size: 20px;
-}
 
-.your-address{
-  border: 1px solid indianred;
-  color: indianred;
-  padding: 5px 10px;
-  border-radius: 5px;
-  width: 100px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
+
+
 
 #cart{
   background: lavender;
