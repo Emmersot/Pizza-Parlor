@@ -1,0 +1,77 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+html,body{
+  height: 100%;
+  margin: 0;
+}
+.container-fluid{
+  display: grid;
+  grid-template-columns: 15vw 70vw 15vw;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.menu-item a{
+  
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px 30px;
+  margin: 12px 0;
+  color: rgb(58, 60, 60);
+  font-weight: 300;
+}
+
+.menu-item a:hover{
+  background: rgb(250, 212, 218);
+}
+#menu{
+  background: bisque;
+}
+
+
+
+#food-container{
+  background: whitesmoke;
+  overflow: scroll;
+  overflow-x: hidden;
+  box-sizing: content-box;
+}
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: sticky;
+  top: 0;
+  background: whitesmoke;
+  z-index: 1;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+#header .address{
+  font-size: 20px;
+}
+.your-address{
+  border: 1px solid indianred;
+  color: indianred;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#cart{
+  background: lavender;
+}

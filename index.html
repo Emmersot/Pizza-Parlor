@@ -5,10 +5,52 @@
 <script src="js/jquery-3.6.0.js"></script>
 <script src="js/scripts.js"></script>
 <head>
+  
   <title>Pizza Parlor</title>
+  
   
 </head>
 <body>
+  <div id="container"
+  class="container-fluid">
+    <div id="menu"> 
+      <div class="menu-item">
+        <h4><a href="#">About</a></h4>
+        <h4><a href="#">Services</a></h4>
+        <h4><a href="#">Your Orders</a></h4>
+        <h4><a href="#">Wishlist</a></h4>
+        <h4><a href="#">Address</a></h4>
+        <h4><a href="#">Help</a></h4>
+      </div>
+    </div>
 
+    <div id="food-container">
+      <div class="header">
+        <div class="add-box">
+          <i class="fa fa-map-marker your-address" id="add-address">Your Address</i>
+        </div>
+        <div class="util">
+          <i class="fa fa-search"> Search</i>
+          <i class="fa fa-tags"> Offers</i>
+          <i class="fa fa-cart-plus" id="cart-plus"> 0 Items</i>
+        </div>
+      </div>
+      <div id="food-items">
+        <div id="Pizza">
+          <p id="category-name">PIZZA???</p>
+          <div id="item-card">
+            <div id="card-top">
+              <i class="fa fa-star" id="rating"> $.3</i>
+              <i class="fa fa-heart-o add-to-cart"></i>
+            </div>
+            <img src="/images/Pizza.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="cart">
+      <h1>I am cart box</h1>
+    </div>
+  </div>
 </body>
 </html>
