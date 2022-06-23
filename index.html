@@ -11,29 +11,17 @@
   
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-    <a class="navbar-brand" href="#"><img src="/images/logo.jpg"></a>
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="navbarResponsive".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive"
-      </div>
-        <ul class="nav navbar-nav">
-            <li><a href="">Page 1</a>
-            </li>
-            <li><a href="">Page 2</a>
-            </li>
-            <li><a href="">Page 3</a>
-            </li>
+  <header>
+    <img class="logo" src="/images/logo.jpg" alt="logo">
+      <nav>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">About</a></li>
         </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+      </nav>
+    <a class="cta" href="mailto:tyleremmerson0216@gmail.com"><button>Contact</button></a>
+  </header>
     <div class="container-fluid" id="MainCont">
       <div id="menu"> 
         
@@ -43,57 +31,153 @@
         <!-- cards -->
         <div class="row g-3">
           <div class="col-12 col-md-4 col-lg-3" id="cards">
-            <div class="card">
+            <form id="pizza">
+              <div class="card">
               <img src="/images/PizzaCheese.jpg" class="card-img-top">
-              <div class="card-body">
-                <h2 class="card-title">Cheese</h2>
-                  <div class="card-container">
-                <p>PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA</p>
+                <div class="card-body">
+                  <h2 class="card-title">Cheese</h2>
+                    <div class="card-container">
+                      <select class="form-control" id="sizeList">
+                        <option value="small">8"</option>
+                        <option value="medium">12"</option>
+                        <option value="large">20"</option>
+                      </select>
+                      <select class="form-control" id="sauceList">
+                        <option value="marinara">Marinara</option>
+                        <option value="pesto">Pesto</option>
+                        <option value="creamyGarlic">Creamy Garlic</option>
+                      </select>
+                      <br>
+                      <input type="checkbox" name="toppings" value="cheese" checked/>
+                        <label for="cheese">Cheese</label>
+                        <br>
+                      </div>
+                    <button id="cart-button" class="btn-cart">Add To Cart</button>
                 </div>
               </div>
             </div>
-          </div>
-            <br>
-            <div class="col-12 col-md-4 col-lg-3" id="cards">
-              <div class="card">
-                <img src="/images/PizzaCombo.jpg" class="card-img-top">
-                <div class="card-body">
-                  <h2 class="card-title">Combo</h2>
+              <br>
+              <div class="col-12 col-md-4 col-lg-3" id="cards">
+                <div class="card">
+                  <img src="/images/PizzaCombo.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h2 class="card-title">Combo</h2>
                     <div class="card-container">
-                  <p>PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA</p>
+                      <select class="form-control" id="sizeList">
+                        <option value="small">8"</option>
+                        <option value="medium">12"</option>
+                        <option value="large">20"</option>
+                      </select>
+                      <select class="form-control" id="sauceList">
+                        <option value="marinara">Marinara</option>
+                        <option value="pesto">Pesto</option>
+                        <option value="creamyGarlic">Creamy Garlic</option>
+                      </select>
+                      <br>
+                      <div class="toppingList">
+                        <input type="checkbox" name="toppingList" value="pepperoni" checked/>
+                        <label for="pepperoni">Pepperoni</label>
+                        <br>
+                        <input type="checkbox" name="toppingList" value="pineapple" checked/>
+                        <label for="pineapple">Pineapple</label>
+                        <br>
+                        <input type="checkbox" name="toppingList" value="mushroom" checked/>
+                        <label for="mushroom">Mushrooms</label>
+                        <br>
+                        <input type="checkbox" name="toppingList" value="olive" checked/>
+                        <label for="olive">Olives</label>
+                        <br>
+                        <input type="checkbox" name="toppingList" value="canadianBacon" checked/>
+                        <label for="canadianBacon">Canadian Bacon</label>
+                        <br>
+                        <input type="checkbox" name="toppingList" value="pepper" checked/>
+                        <label for="pepper">Peppers</label>
+                        <br>
+                      </div>
+                      <button id="cart-button" class="btn-cart">Add To Cart</button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             <br>
+
             <div class="col-12 col-md-4 col-lg-3" id="cards">
               <div class="card">
                 <img src="/images/PizzaPepperoni.jpg" class="card-img-top">
                 <div class="card-body">
                   <h2 class="card-title">Pepperoni</h2>
                     <div class="card-container">
-                  <p>PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA</p>
+                      <select class="form-control" id="sizeList">
+                        <option value="small">8"</option>
+                        <option value="medium">12"</option>
+                        <option value="large">20"</option>
+                      </select>
+                      <select class="form-control" id="sauceList">
+                        <option value="marinara">Marinara</option>
+                        <option value="pesto">Pesto</option>
+                        <option value="creamyGarlic">Creamy Garlic</option>
+                      </select>
+                      <br>
+                      <input type="checkbox" name="toppings" value="cheese" checked/>
+                        <label for="cheese">Cheese</label>
+                        <br>
+                        <input type="checkbox" name="toppings" value="pepperoni" checked/>
+                        <label for="pepperoni">Pepperoni</label>
+                        <br>
+                    </div>
+                    <button id="cart-button" class="btn-cart">Add To Cart</button>
                   </div>
                 </div>
               </div>
-            </div>
             <br>
-            
+
             <div class="col-12 col-md-4 col-lg-3" id="cards">
               <div class="card">
                 <img src="/images/PizzaVeggie.jpg" class="card-img-top">
                 <div class="card-body">
-                  <h2 class="card-title">Veggie</h2>
+                  <h2 class="card-title">Build Your Own</h2>
                     <div class="card-container">
-                  <p>PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA PIZZA</p>
+                      <select class="form-control" id="sizeList">
+                        <option value="small">8"</option>
+                        <option value="medium">12"</option>
+                        <option value="large">20"</option>
+                      </select>
+                      <select class="form-control" id="sauceList">
+                        <option value="marinara">Marinara</option>
+                        <option value="pesto">Pesto</option>
+                        <option value="creamyGarlic">Creamy Garlic</option>
+                      </select>
+                      <br>
+                      <div class="toppingList">
+                        <input type="checkbox" name="topping" value="pepperoni"/>
+                        <label for="pepperoni">Pepperoni</label>
+                        <br>
+                        <input type="checkbox" name="topping" value="pineapple"/>
+                        <label for="pineapple">Pineapple</label>
+                        <br>
+                        <input type="checkbox" name="topping" value="mushroom"/>
+                        <label for="mushroom">Mushrooms</label>
+                        <br>
+                        <input type="checkbox" name="topping" value="olive"/>
+                        <label for="olive">Olives</label>
+                        <br>
+                        <input type="checkbox" name="topping" value="canadianBacon"/>
+                        <label for="canadianBacon">Canadian Bacon</label>
+                        <br>
+                        <input type="checkbox" name="topping" value="pepper"/>
+                        <label for="pepper">Peppers</label>
+                        <br>
+                      </div>
+                      <button id="cart-button" class="btn-cart">Add To Cart</button>
+                      
                   </div>
+                </form>
                 </div>
               </div>
             </div>
           </div>
             <br>
           </div>
-<!-- cart -->
           <div id="cart">
             <h1>I am cart box</h1>
           </div>
