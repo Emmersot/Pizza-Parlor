@@ -1,8 +1,8 @@
-# _{Application Name}_
+# _Pizza Parlor_
 
-#### By _**{List of contributors}**_
+#### By _**Tyler Emmerson**_
 
-#### _{Brief description of application}_
+#### _Choose your toppings, size, then add to cart, and you'll get a price for your order._
 
 ## Technologies Used
 
@@ -31,16 +31,19 @@ _{Create a website for a pizza company where a user can choose one or more indiv
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _Build Your Own pizza is the only working one_
+* _None of the other pizza's have preset toppings and sizes_
+* _Other pizzas "Add to cart" buttons don't work_
+* _Navbar at the top doesn't work_
 
 ## License
 
 _<p><a href="LICENSE.txt">MIT</a></p>_
 
-Copyright (c) 2022  Tyler Emmerson(s)
+Copyright (c) 2022  Tyler Emmerson
 
-TEST
+## TEST
+
 Test1: "Create a global var for the toppings to be pushed into an empty array"
 Code: var uniqueArray;
 Expected Output: uniqueArray()
