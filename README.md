@@ -38,18 +38,56 @@ _{Create a website for a pizza company where a user can choose one or more indiv
 
 _<p><a href="LICENSE.txt">MIT</a></p>_
 
-Copyright (c) 2022 Jacob Palaoro & Tyler Emmerson(s)
+Copyright (c) 2022  Tyler Emmerson(s)
 
 TEST
+Test1: "Create a global var for the toppings to be pushed into an empty array"
+Code: var uniqueArray;
+Expected Output: uniqueArray()
 
-1 create object called pizza that will have "toppings, price, total price, size."
+Test2: "Create object called pizza that will have "toppings, size."
+Code: function Pizza(size) {
+  this.size = size;
+  this.topping = topping;
 
-2 create a function for size that will multiply/additive the price.
 
-3 create a function to take the "toppings" values and assign them a price or value.
+Test3: "Create a radio selector for size and toppings."
+Code: <input type="radio" name="size" value="small"/>
+                        <label for="">Small</label>
+      <input type="checkbox" name="topping" value="pepperoni">
+                        <label for="">pepperoni</label>
 
-4 create function to take values from html "toppings" and add them up.
+Test4: "Create a function for size that will have fixed pricing of $15 $10 $5."
+Code: Pizza.prototype.price = function() {
+  if (this.size === "small") {
+    return 15);
+  }
+  if (this.size === "medium") {
+    return 10);
+  }
+  if (this.size === "large") {
+    return 5);
+  }
+}
 
-5 combine size multiplier/additive $5 $10 $20 and toppings values.
+Test 5: "Create a way to take the inputted toppings, add them to an array, then to a string."
+Code: const selectedToppings = [];
+      
+      $('input[name="topping"]:checked').each(function(){
+        toppings = $(this).val();
+        selectedToppings.push(toppings)
+        uniqueArray = selectedToppings.filter(function(item, pos) {
+          return selectedToppings.indexOf(item) == pos;
+        })
+        var uniqueString = uniqueArray.join(", ")
 
-6 create an output for the price to be seen based off of choices.
+Test 6: "Create a way to take the inputted size and output it to the cart."
+Code: ```var selectedSize = $("input:radio[name=size]:checked").val();
+      $(".size-pizza").text(selectedSize);```
+
+Test 7: "Create function to take the inputted toppings and output it to the cart."
+Code: $(".toppings").text(uniqueString);
+
+Test 8: "Combine size additive $15 $10 $5 and toppings values into a total price."
+Code : var newPizza = new Pizza(selectedSize, selectedToppings);
+      $(".price").text(newPizza.price());
