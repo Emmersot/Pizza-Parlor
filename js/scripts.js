@@ -1,48 +1,50 @@
+//Global Variable
+//empty array to push toppings into for final result listing
+var uniqueArray;
 // BUSINESS LOGIC
-function Pizza(toppings, size, sauce, price) {
-  this.toppings = toppings;
+function Pizza(size) {
   this.size = size;
-  this.sauce = sauce;
-  this.price = price;
-  this.cartTotal = price;
+  this.topping = uniqueArray.length;
 }
+
+Pizza.prototype.price = function() {
+  if (this.size === "small") {
+    return 15 + uniqueArray.length;
+  }
+  if (this.size === "medium") {
+    return 10 + uniqueArray.length;
+  }
+  if (this.size === "large") {
+    return 5 + uniqueArray.length;
+  }
+}
+
 // UI LOGIC
   $(document).ready(function() {
-    $("form#pizza-order-form").submit(function(event) {
+    $("#pizza-append").submit(function(event) {
+
       event.preventDefault();
-      const selectedSize = document.getElementById("sizeList");
-      const selectedSauce = document.getElementById("sauceList");
+      // open array for toppings to go into
       const selectedToppings = [];
-      $('input[name="toppingList"]:checked').each(function(){
-        selectedToppings.push($(this).val());
+      
+      $('input[name="topping"]:checked').each(function(){
+        toppings = $(this).val();
+        selectedToppings.push(toppings)
+        uniqueArray = selectedToppings.filter(function(item, pos) {
+          return selectedToppings.indexOf(item) == pos;
+        })
+        //return the string as an array with ", "
+        var uniqueString = uniqueArray.join(", ")
+        //create text label for toppings to display in-cart
+        $(".toppings").text(uniqueString);
       });
-      //set price based on size
-      if (selectedSize === "small") {
-        sizePrice = 4;
-      }
-      else if (selectedSize === "medium") {
-        sizePrice = 6;
-      }
-      else if (selectedSize === "large") {
-        sizePrice = 8;
-      }
-      //set price based on sauce selected
-      if (selectedSauce === "marinara") {
-        saucePrice = 2;
-      }
-      else (sizePrice = 3);
-      //set price based on number of toppings selected
-      toppingsPrice = 10;
+      var selectedSize = $("input:radio[name=size]:checked").val();
+      //create text label for size to display in-cart
+      $(".size-pizza").text(selectedSize);
+      
       //calculate total price
-      totalPrice = sizePrice + saucePrice + toppingsPrice;
-      //create pizza with selected options
-      let newPizza = Pizza(selectedToppings, selectedSize, selectedSauce, totalPrice)
-
-      //create text label to display in-cart
-      addedPizza += newPizza.size + ", " + newPizza.sauce + ", " + newPizza.totalPrice + "<br>"+ toString(newPizza.toppings) + "<br><br>"
-
-
-      $("#newPizza").html(addedPizza);
-  });
+      var newPizza = new Pizza(selectedSize, selectedToppings);
+      //create text label for price to display in-cart
+      $(".price").text(newPizza.price());
+    });
 });
-// will have the cart-button append the added toppings/sizes/sauce to the cart
